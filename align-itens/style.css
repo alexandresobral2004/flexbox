@@ -1,0 +1,28 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  display: flex;
+}
+.item {
+  flex: 1;
+  background-color: #ccc;
+  border: 1px solid black;
+  margin: 5px;
+  text-align: center;
+  font-size: 1, 5em;
+  flex-wrap: wrap;
+}
+.column {
+  flex-direction: column;
+}
+.stretch {
+  align-items: stretch;
+  height: 90px;
+}
+.flex-start {
+  align-items: flex-start;
+}
+.flex-end {
+  align-items: flex-end;
+}

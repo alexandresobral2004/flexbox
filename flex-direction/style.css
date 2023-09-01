@@ -1,0 +1,19 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid #ccc;
+}
+.row {
+  flex-direction: row;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+.column {
+  flex-direction: column;
+}
+.column-reverse {
+  flex-direction: column-reverse;
+}
