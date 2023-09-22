@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com CSS Grid e Flexbox</title>
+
+    <!-- Adicione o link para os arquivos CSS do Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos CSS personalizados -->
+    <style>
+      /* Layout com CSS Grid */
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        /* Uma coluna para o menu e três colunas para o conteúdo */
+        grid-template-rows: auto;
+        gap: 20px;
+        grid-template-areas:
+          "menu content content";
+        /* Define as áreas do grid */
+        margin: 20px;
+      }
+
+      .menu {
+        grid-area: menu;
+        /* Define a área para o menu */
+        background-color: #3498db;
+        color: #fff;
+        padding: 20px;
+      }
+
+      .content {
+        grid-area: content;
+        /* Define a área para o conteúdo */
+        background-color: #e74c3c;
+        color: #fff;
+        padding: 20px;
+      }
+
+      /* Menu com Flexbox */
+      .menu-items {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .menu-item {
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .menu-item:hover {
+        background-color: #2980b9;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <!-- Menu com CSS Grid -->
+      <div class="menu">
+        <h2>Menu</h2>
+        <div class="menu-items">
+          <a href="#" class="menu-item">Item 1</a>
+          <a href="#" class="menu-item">Item 2</a>
+          <a href="#" class="menu-item">Item 3</a>
+        </div>
+      </div>
+
+      <!-- Conteúdo com CSS Grid -->
+      <div class="content">
+        <h2>Conteúdo</h2>
+        <p>Este é o conteúdo principal da página.</p>
+      </div>
+    </div>
+
+  </body>
+
+</html>
